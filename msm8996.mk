@@ -268,10 +268,10 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     lights.msm8996
 
-# LiveDisplay native
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@1.0-service-sdm \
-    vendor.lineage.livedisplay-V1.0-java
+# LiveDisplay (removed)
+
+
+
 
 PRODUCT_BOOT_JARS += \
     vendor.lineage.livedisplay-V1.0-java
