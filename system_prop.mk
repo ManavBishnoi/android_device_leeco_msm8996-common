@@ -27,30 +27,31 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Set default power mode to low power for encoder
 PRODUCT_PROPERTY_OVERRIDES += \
-    vidc.debug.perf.mode=2
+    vidc.debug.perf.mode=0
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.audio.ssr.3mic=false \
+    persist.audio.ssr.3mic=true \
     af.fast_track_multiplier=1 \
     audio.heap.size.multiplier=7 \
-    ro.vendor.audio.sdk.ssr=false \
+    ro.vendor.audio.sdk.ssr=true \
     vendor.audio_hal.period_size=192 \
-    vendor.audio.tunnel.encode=false \
-    vendor.voice.path.for.pcm.voip=true \
-    ro.vendor.audio.sdk.fluencetype=fluence \
-    persist.vendor.audio.fluence.voicecall=true \
+    vendor.audio.tunnel.encode=true \
+
+    vendor.voice.path.for.pcm.voip=false \
+    ro.vendor.audio.sdk.fluencetype=none \
+    persist.vendor.audio.fluence.voicecall=false \
     persist.vendor.audio.fluence.voicerec=false \
     persist.vendor.audio.fluence.audiorec=false \
-    persist.vendor.audio.fluence.speaker=true \
-    vendor.audio.offload.buffer.size.kb=64 \
+    persist.vendor.audio.fluence.speaker=false \
+    vendor.audio.offload.buffer.size.kb=16 \
     vendor.audio.offload.video=true \
     vendor.audio.offload.pcm.16bit.enable=true \
     vendor.audio.offload.pcm.24bit.enable=true \
-    vendor.audio.offload.track.enable=false \
+    vendor.audio.offload.track.enable=true \
     vendor.audio.offload.multiaac.enable=true \
     vendor.audio.offload.gapless.enabled=true \
-    vendor.audio.offload.passthrough=false \
+    vendor.audio.offload.passthrough=true \
     vendor.audio.offload.multiple.enabled=true \
     vendor.audio.offload.min.duration.secs=30 \
     vendor.audio.safx.pbe.enabled=true \
@@ -130,7 +131,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.am.reschedule_service=true \
+    ro.am.reschedule_service=false \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.min_freq_0=307200 \
     ro.min_freq_4=307200 \
